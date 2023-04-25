@@ -6,7 +6,10 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
+`;
 
+const ButtonSection = styled.div`
+	margin: 30px 15px;
 `;
 
 const ButtonWrapper = styled.ul`
@@ -15,6 +18,14 @@ const ButtonWrapper = styled.ul`
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+`;
+
+const SectionTitle = styled.div`
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 135%;
+    color: #141719;
+    padding: 16px 0px 16px 8px;
 `;
 
 const CityButton = styled.li`
@@ -27,6 +38,7 @@ const CityButton = styled.li`
     -webkit-box-align: center;
     align-items: center;
     height: 40px;
+    margin: 0 3px;
 
     white-space: nowrap; /* 자동 줄바꿈 방지 */
     overflow: hidden; /* 초과 내용 감춤 */
@@ -53,8 +65,11 @@ const CityButton = styled.li`
 function Selection() {
 
 	return (
-		<div>
-			<div> 
+		<Wrapper>
+			<ButtonSection> 
+				<SectionTitle>
+					방문하실 지역을 선택해주세요
+				</SectionTitle>
 				<div>
 					<ButtonWrapper> 
 						<CityButton>오사카</CityButton> 
@@ -63,8 +78,21 @@ function Selection() {
 						
 					</ButtonWrapper>
 				</div>
-			</div>
-		</div>
+			</ButtonSection> 
+			<ButtonSection> 
+				<SectionTitle>
+					방문할 관광지를 선택해주세요
+				</SectionTitle>
+				<div>
+					<ButtonWrapper> 
+						<CityButton>오사카</CityButton> 
+						<CityButton>교토</CityButton> 
+						
+						
+					</ButtonWrapper>
+				</div>
+			</ButtonSection> 
+		</Wrapper>
 
 	)
 
