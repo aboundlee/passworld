@@ -1,6 +1,6 @@
 import './App.css';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
-import Selection from './Selection';
+import Questionnaires from './Questionnaires';
 import styled from "styled-components";
 
 
@@ -21,8 +21,8 @@ const App = () => {
 			  	<h1>Home</h1>
 			  }/>
 
-              <Route path='/selection' 
-			  	element={<Selection/>}
+              <Route path='/question' 
+			  	element={<Questionnaires/>}
 			  />
           </Routes>
         </Router>
